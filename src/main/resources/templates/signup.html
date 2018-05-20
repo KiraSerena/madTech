@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Styles.css}"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <h1>Ny bruger</h1>
+    <form method="Post" th:action="@{/signup}">
+        <!-- <p>Enter student id</p>
+         <input   type="number" name="ID" th:field="${student.studentID}"  />-->
+        <p>Brugernavn</p>
+        <input type="text" th:field="${kunde.username}"/>
+        <p>Kodeord</p>
+        <input type="text" th:field="${kunde.password}"/>
+
+
+        <p>Fornavn</p>
+        <input type="text" th:field="${kunde.fornavn}"/>
+        <p>Efternavn</p>
+        <input type="text" th:field="${kunde.efternavn}"/>
+        <p>Email</p>
+        <input type="text" th:field="${kunde.email}"/>
+        <p>TlfNr</p>
+        <input type="text" th:field="${kunde.tlfNr}"/>
+        <p>adresse</p>
+        <input type="text" th:field="${kunde.adresse}"/>
+        <p>PostNr</p>
+        <input type="text" th:field="${kunde.zipKode}"/>
+        <p>By</p>
+        <input type="text" th:field="${kunde.city}"/>
+        <p>Land</p>
+        <input type="text" th:field="${kunde.land}"/>
+
+
+
+        <input class="btn btn-primary" type="submit" value="Send"/>
+    </form>
+</div>
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>
