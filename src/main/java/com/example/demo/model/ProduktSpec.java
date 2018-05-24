@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-public class ProductSpec {
+public class ProduktSpec {
 
 
 
@@ -10,14 +10,10 @@ public class ProductSpec {
     private String materiale;
     private String farve;
 
-    public ProductSpec (){
-
+    public ProduktSpec(){
     }
 
-
-
-
-    public ProductSpec(int vægt, int pris, String materiale, String farve, String størelse) {
+    public ProduktSpec(int vægt, int pris, String materiale, String farve, String størelse) {
         this.vægt = vægt;
         this.pris = pris;
         this.materiale = materiale;

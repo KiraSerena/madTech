@@ -4,7 +4,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-public class Products {
+public class Produkter {
 
 
     private int produktId;
@@ -12,17 +12,37 @@ public class Products {
     private int lagerStatus;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date startDato;
+    private Date slutDato;
+    private String leveringstid;
 
-    public Products (){
+
+    public Produkter(){
 
     }
 
 
-    public Products(int produktId, String produktNavn, int lagerStatus, Date startDato) {
+    public Produkter(int produktId, String produktNavn, int lagerStatus, Date startDato, Date slutDato, String leveringstid) {
         this.produktId = produktId;
         this.produktNavn = produktNavn;
         this.lagerStatus = lagerStatus;
         this.startDato = startDato;
+        this.slutDato = slutDato;
+    }
+
+    public String getLeveringstid() {
+        return leveringstid;
+    }
+
+    public void setLeveringstid(String leveringstid) {
+        this.leveringstid = leveringstid;
+    }
+
+    public Date getSlutDato() {
+        return slutDato;
+    }
+
+    public void setSlutDato(Date slutDato) {
+        this.slutDato = slutDato;
     }
 
     public int getProduktId() {

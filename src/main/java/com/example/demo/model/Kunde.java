@@ -15,9 +15,6 @@ public class Kunde {
     private String efternavn;
     private String email;
     private int tlfNr;
-
-
-
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date oprettelsesDato;
 
@@ -27,16 +24,40 @@ public class Kunde {
     private  String land;
 
 
+    public Kunde(){
+    }
+
+    public Kunde(String username, String password, String roles, int kundeid, String fornavn, String efternavn, String email, int tlfNr, Date oprettelsesDato, String adresse, int zipKode, String city, String land) {
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+        this.kundeid = kundeid;
+        this.fornavn = fornavn;
+        this.efternavn = efternavn;
+        this.email = email;
+        this.tlfNr = tlfNr;
+        this.oprettelsesDato = oprettelsesDato;
+        this.adresse = adresse;
+        this.zipKode = zipKode;
+        this.city = city;
+        this.land = land;
+    }
+
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
     public String getCity() {
         return city;
     }
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-
-    public Kunde(){
     }
 
 
@@ -54,14 +75,6 @@ public class Kunde {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
     }
 
     public int getKundeid() {

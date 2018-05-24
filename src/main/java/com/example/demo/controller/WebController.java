@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Kunde;
-import com.example.demo.repo.KundeRepo;
+import com.example.demo.repo.KundeKartotek;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,14 +12,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class WebController {
 
+   @RequestMapping(value = "/")
+   public String home(Model model) {
+       return "home";
+   }
 
-    KundeRepo kundeRepo = new KundeRepo();
+    @GetMapping("/signup")
+    public String signup() {
+        return "signup";
+    }
 
-
-    @RequestMapping(value = "/")
-    public String home() {
+    @PostMapping("/signup")
+    public String signup(@ModelAttribute Kunde kunde, Model model) {
         return "home";
     }
+
 
     @RequestMapping(value = "/user")
     public String user() {
@@ -68,23 +75,5 @@ public class WebController {
         return "mouthpiece";
     }
 
-    @RequestMapping(value = "/signup")
-    public String signUp() {
-        return "signup";
-    }
-
-    @GetMapping("/signup")
-    public String signUp(Model model) {
-        model.addAttribute("kunde", new Kunde());
-        return "signup";
-    }
-
-    @PostMapping("/signup")
-    public String create(@ModelAttribute Kunde kunde, Model model) {
-        kundeRepo.insert(kunde);
-        model.addAttribute("kunde", kundeRepo.findAll());
-        return "redirect:/";
-
-    }
 
 }

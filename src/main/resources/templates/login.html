@@ -13,10 +13,39 @@
     <script
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body class="container" style="margin:50px">
-<div class="row col-sm-6"
-     style="border: 1px ridge #003312; padding:20px; float: none; margin: 0 auto;">
-    <h5 class="text-center" style="font-size: 25px">Sign In</h5>
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">MadTech</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="caps">Caps</a></li>
+                <li><a href="brings">Beautyrings</a></li>
+                <li ><a href="covers">Covers</a></li>
+                <li><a href="mouthpiece">MouthPiece</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/login">Login</a></li>
+                <li><a href="signup">Sign Up</a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="row col-sm-6" style="padding:20px; float: none; margin: 0 auto; width: 400px">
+    <h5 class="text-center" style="font-size: 25px">Login</h5>
     <div th:if="${param.error}">
         <p style="color: red">UserName or PassWord is wrong. Please
             check again!</p>
@@ -34,7 +63,7 @@
             <label for="password">Password: </label>
             <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password"/>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        <button type="submit" class="btn btn-primary btn-block" style="background-color: deepskyblue; border: none">Submit</button>
     </form>
 </div>
 </body>
