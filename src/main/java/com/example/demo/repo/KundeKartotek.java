@@ -1,7 +1,6 @@
 package com.example.demo.repo;
 
 import com.example.demo.model.Kunde;
-import com.example.demo.model.Produkter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -25,22 +24,19 @@ public class KundeKartotek {
         public Kunde mapRow(ResultSet rs, int rowNum) throws SQLException {
             Kunde kunde = new Kunde();
 
-
-            kunde.setUsername(rs.getString("username"));
-            kunde.setPassword(rs.getString("password"));
-            kunde.setKundeid(rs.getInt("kundeid"));
+           // kunde.setKundeId(rs.getInt("kundeId"));
             kunde.setFornavn(rs.getString("fornavn"));
             kunde.setEfternavn(rs.getString("efternavn"));
-            kunde.setRoles(rs.getString("roles"));
             kunde.setEmail(rs.getString("email"));
             kunde.setTlfNr(rs.getInt("tlfnr"));
             kunde.setAdresse(rs.getString("adresse"));
-            kunde.setZipKode(rs.getInt("zipKode"));
+            kunde.setZipcode(rs.getInt("zipcode"));
             kunde.setCity(rs.getNString("city"));
             kunde.setLand(rs.getString("land"));
-            kunde.setOprettelsesDato(rs.getDate("oprettelsesDato"));
+         //   kunde.setOprettelsesDato(rs.getDate("oprettelsesDato"));
 
             return kunde;
+
         }
 
     }
@@ -49,10 +45,10 @@ public class KundeKartotek {
         return jdbcTemplate.query("select * from kunde", new KundeRowMapper());
     }
     public int insert(Kunde kunde) {
-        return jdbcTemplate.update("insert into kunde (username, password, fornavn, , efternavn, email, tlfNr, oprettelsesDato, adresse, zipKode, city, land) " +
-                        "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                new Object[] { kunde.getUsername(), kunde.getPassword(), kunde.getFornavn(), kunde.getEfternavn(), kunde.getEmail(), kunde.getTlfNr(),
-                        kunde.getOprettelsesDato(), kunde.getAdresse(), kunde.getZipKode(), kunde.getCity(), kunde.getLand() });
+        return jdbcTemplate.update("insert into kunde (fornavn, efternavn, email, tlfNr, adresse, zipcode, city, land) " +
+                        "values(?, ?, ?, ?, ?, ?, ?, ?)",
+                new Object[] { kunde.getFornavn(), kunde.getEfternavn(), kunde.getEmail(), kunde.getTlfNr(),
+                         kunde.getAdresse(), kunde.getZipcode(), kunde.getCity(), kunde.getLand() });
     }
 
 
@@ -68,7 +64,7 @@ public class KundeKartotek {
 
 
     public int update(Kunde kunde) {
-        return jdbcTemplate.update("update kunde set username = ?, password = ?, fornavn = ?, efternavn = ?, slutDato = ?,  lagerStatus = ?, last_name = ? where kundeId = ?",
+        return jdbcTemplate.update("update kunde, fornavn = ?, efternavn = ?, email = ?,  tlfNr = ?, adresse = ?, zipcode = ?, city = ?, land = ?, where kundeId = ?",
                 new Object[] { });
     }
 

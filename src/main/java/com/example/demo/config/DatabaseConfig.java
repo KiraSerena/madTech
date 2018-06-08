@@ -13,7 +13,7 @@ public class DatabaseConfig {
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 
         driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        driverManagerDataSource.setUrl("jdbc:mysql://localhost/testlogin");
+        driverManagerDataSource.setUrl("jdbc:mysql://localhost/test");
         driverManagerDataSource.setUsername("root");
         driverManagerDataSource.setPassword("Nintendo31Abekat ");
 

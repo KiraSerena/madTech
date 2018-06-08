@@ -1,7 +1,12 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Kunde;
+import com.example.demo.model.UserRole;
+import com.example.demo.model.Users;
 import com.example.demo.repo.KundeKartotek;
+import com.example.demo.repo.UserKartotek;
+import com.example.demo.repo.UserRoleKartotek;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,21 +17,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class WebController {
 
-   @RequestMapping(value = "/")
-   public String home(Model model) {
-       return "home";
-   }
+    @Autowired
+    KundeKartotek kundeKartotek = new KundeKartotek();
 
-    @GetMapping("/signup")
-    public String signup() {
-        return "signup";
+    @Autowired
+    UserKartotek userKartotek = new UserKartotek();
+
+    @Autowired
+    UserRoleKartotek userRoleKartotek = new UserRoleKartotek();
+
+
+
+
+    @RequestMapping(value = "/")
+    public String home() {
+        return "frontPage";
     }
-
-    @PostMapping("/signup")
-    public String signup(@ModelAttribute Kunde kunde, Model model) {
-        return "home";
-    }
-
 
     @RequestMapping(value = "/user")
     public String user() {
@@ -34,9 +40,7 @@ public class WebController {
     }
 
     @RequestMapping(value = "/admin")
-    public String admin() {
-        return "admin";
-    }
+    public String admin() { return "admin"; }
 
     @RequestMapping(value = "/login")
     public String login() {
@@ -75,5 +79,28 @@ public class WebController {
         return "mouthpiece";
     }
 
+
+    @GetMapping("/signup")
+    public String signUp(Model model) {
+        model.addAttribute("kunde", new Kunde());
+        model.addAttribute("users", new Users());
+        return "signup";
+    }
+
+    @PostMapping("/signup")
+    public String signUp(@ModelAttribute Kunde kunde, Users users, UserRole userRole, Model model) {
+        kundeKartotek.insert(kunde);
+        model.addAttribute("kunde", kundeKartotek.findAll());
+        userKartotek.insert(users);
+        model.addAttribute("users", userKartotek.findAll());
+
+        userRoleKartotek.insert(userRole);
+        model.addAttribute("userRole", userRoleKartotek.findAll());
+
+
+
+        return "redirect:/";
+
+    }
 
 }

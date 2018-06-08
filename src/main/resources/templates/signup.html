@@ -91,15 +91,24 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-<form action="/action_page.php">
+
+<form method="Post" th:action="@{/signup}">
+
+<form action="signUp">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <h1>Sign Up</h1>
     <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter username" name="username" required th:field="${kunde.username}"/>
+    <input type="text" placeholder="Enter username" name="username" required th:field="${users.username}"/>
 
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter password" name="password" required
-           th:field="${kunde.password}"/>
+           th:field="${users.password}"/>
+
+    <label for="fornavn"><b>First name </b></label>
+    <input type="text" placeholder="Enter first name" name="firstname" required th:field="${kunde.fornavn}"/>
+
+    <label for="efternavn"><b>Last name</b></label>
+    <input type="text" placeholder="Enter last name" name="lastname" required th:field="${kunde.efternavn}"/>
 
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter email" name="email" required th:field="${kunde.email}"/>
@@ -114,7 +123,7 @@
     <input type="text" placeholder="Enter city" name="city" required th:field="${kunde.city}"/>
 
     <label for="zipKode"><b>Zip Code</b></label>
-    <input type="text" placeholder="Enter zip code" name="zipKode" required th:field="${kunde.zipKode}"/>
+    <input type="text" placeholder="Enter zip code" name="zipcode" required th:field="${kunde.zipcode}"/>
 
     <label for="country"><b>Country</b></label>
     <select style="width: 300px; padding: 15px; margin: 5px 0 20px 0; margin-left: auto; margin-right: auto; display:block; border: none; background: #f1f1f1;" th:field="${kunde.land}"/>
@@ -372,6 +381,9 @@
     <hr>
 
     <button type="submit" class="registerbtn">Register</button>
+
+    <input class="btn btn-primary" type="submit" value="Send"/>
+
     </div>
     <div class="container signin">
         <p>Already have an account? <a href="/login">Sign in</a>.</p>

@@ -6,11 +6,7 @@ import java.util.Date;
 
 public class Kunde {
 
-    private String username;
-    private String password;
-    private String roles;
-
-    private int kundeid;
+    private int kundeId;
     private String fornavn;
     private String efternavn;
     private String email;
@@ -19,7 +15,10 @@ public class Kunde {
     private Date oprettelsesDato;
 
     private String adresse;
-    private int zipKode;
+
+
+
+    private int zipcode;
     private String city;
     private  String land;
 
@@ -27,29 +26,18 @@ public class Kunde {
     public Kunde(){
     }
 
-    public Kunde(String username, String password, String roles, int kundeid, String fornavn, String efternavn, String email, int tlfNr, Date oprettelsesDato, String adresse, int zipKode, String city, String land) {
-        this.username = username;
-        this.password = password;
-        this.roles = roles;
-        this.kundeid = kundeid;
+    public Kunde(String username, String password, String roles, int kundeId, String fornavn, String efternavn, String email, int tlfNr, Date oprettelsesDato, String adresse, int zipcode, String city, String land) {
+
+        this.kundeId = kundeId;
         this.fornavn = fornavn;
         this.efternavn = efternavn;
         this.email = email;
         this.tlfNr = tlfNr;
         this.oprettelsesDato = oprettelsesDato;
         this.adresse = adresse;
-        this.zipKode = zipKode;
+        this.zipcode = zipcode;
         this.city = city;
         this.land = land;
-    }
-
-
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
     }
 
     public String getCity() {
@@ -60,30 +48,6 @@ public class Kunde {
         this.city = city;
     }
 
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getKundeid() {
-        return kundeid;
-    }
-
-    public void setKundeid(int kundeid) {
-        this.kundeid = kundeid;
-    }
 
     public String getFornavn() {
         return fornavn;
@@ -133,12 +97,20 @@ public class Kunde {
         this.adresse = adresse;
     }
 
-    public int getZipKode() {
-        return zipKode;
+    public int getZipcode() {
+        return zipcode;
     }
 
-    public void setZipKode(int zipKode) {
-        this.zipKode = zipKode;
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public int getKundeId() {
+        return kundeId;
+    }
+
+    public void setKundeId(int kundeId) {
+        this.kundeId = kundeId;
     }
 
     public String getLand() {
