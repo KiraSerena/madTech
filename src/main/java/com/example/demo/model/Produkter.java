@@ -4,7 +4,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-public class Produkter {
+public class Produkter extends ProduktSpec {
 
 
     private int produktId;

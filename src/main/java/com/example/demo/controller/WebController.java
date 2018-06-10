@@ -98,8 +98,7 @@ public class WebController {
         model.addAttribute("userRole", userRoleKartotek.findAll());
 
 
-
-        return "redirect:/";
+        return "home";
 
     }
 
