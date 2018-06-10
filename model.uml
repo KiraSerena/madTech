@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.demo.model</OriginalElement>
+  <nodes>
+    <node x="737.9213804713804" y="911.5">com.example.demo.repo.UserRoleKartotek.UserRoleRowMapper</node>
+    <node x="1301.4069584736253" y="870.0">com.example.demo.repo.UserKartotek</node>
+    <node x="1901.0689955106625" y="819.0">com.example.demo.repo.ProduktSpecKartotek</node>
+    <node x="2357.5689955106623" y="1126.0">com.example.demo.repo.ProduktKartotek.ProdukterRowMapper</node>
+    <node x="689.0" y="2195.0">com.example.demo.config.DatabaseConfig</node>
+    <node x="1404.4904320987657" y="0.0">com.example.demo.model.Users</node>
+    <node x="1760.9069584736253" y="533.0">com.example.demo.repo.ProduktSpecKartotek.ProductSpecRowMapper</node>
+    <node x="959.2404320987656" y="481.0">com.example.demo.model.UserRole</node>
+    <node x="0.0" y="2195.0">com.example.demo.config.SecurityConfig</node>
+    <node x="0.0" y="276.0">com.example.demo.model.Kunde</node>
+    <node x="1937.5828843995514" y="0.0">com.example.demo.model.ProduktSpec</node>
+    <node x="815.9213804713804" y="1156.5">com.example.demo.repo.UserRoleKartotek</node>
+    <node x="885.5689113355782" y="1483.0">com.example.demo.controller.WebController</node>
+    <node x="2288.0689955106623" y="819.0">com.example.demo.repo.ProduktKartotek</node>
+    <node x="184.54638047138042" y="1095.0">com.example.demo.repo.KundeKartotek</node>
+    <node x="108.1154320987655" y="911.5">com.example.demo.repo.KundeKartotek.KundeRowMapper</node>
+    <node x="1229.5689113355782" y="502.0">com.example.demo.repo.UserKartotek.UserRowMapper</node>
+    <node x="2388.2819584736253" y="389.0">com.example.demo.model.Produkter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.demo.repo.ProduktSpecKartotek" target="com.example.demo.repo.ProduktSpecKartotek.ProductSpecRowMapper">
+      <point x="-122.33333333333348" y="-128.5" />
+      <point x="1962.235662177329" y="794.0" />
+      <point x="1871.9069584736253" y="794.0" />
+      <point x="-111.0" y="46.0" />
+    </edge>
+    <edge source="com.example.demo.repo.ProduktSpecKartotek.ProductSpecRowMapper" target="com.example.demo.repo.ProduktSpecKartotek">
+      <point x="111.0" y="46.0" />
+      <point x="2093.9069584736253" y="794.0" />
+      <point x="2084.5689955106627" y="794.0" />
+      <point x="0.0" y="-128.5" />
+    </edge>
+    <edge source="com.example.demo.repo.KundeKartotek.KundeRowMapper" target="com.example.demo.model.Kunde">
+      <point x="-96.75" y="-46.0" />
+      <point x="204.8654320987655" y="850.0" />
+      <point x="91.89999999999986" y="850.0" />
+      <point x="-367.6" y="272.0" />
+    </edge>
+    <edge source="com.example.demo.controller.WebController" target="com.example.demo.repo.UserKartotek">
+      <point x="95.81818181818176" y="-333.5" />
+      <point x="1244.88709315376" y="1433.0" />
+      <point x="1490.0833333333335" y="1433.0" />
+      <point x="1490.0833333333335" y="1070.0" />
+      <point x="1393.1569584736253" y="1070.0" />
+      <point x="-91.75" y="87.5" />
+    </edge>
+    <edge source="com.example.demo.repo.UserRoleKartotek.UserRoleRowMapper" target="com.example.demo.model.UserRole">
+      <point x="102.5" y="-46.0" />
+      <point x="1045.4213804713804" y="850.0" />
+      <point x="1037.2404320987657" y="850.0" />
+      <point x="-26.0" y="67.0" />
+    </edge>
+    <edge source="com.example.demo.repo.ProduktSpecKartotek.ProductSpecRowMapper" target="com.example.demo.model.ProduktSpec">
+      <point x="111.0" y="-46.0" />
+      <point x="2093.9069584736253" y="364.0" />
+      <point x="2123.5828843995514" y="364.0" />
+      <point x="-62.0" y="169.5" />
+    </edge>
+    <edge source="com.example.demo.controller.WebController" target="com.example.demo.model.Users">
+      <point x="239.5454545454545" y="-333.5" />
+      <point x="1388.6143658810327" y="1463.0" />
+      <point x="1689.9069584736253" y="1463.0" />
+      <point x="1689.9069584736253" y="236.0" />
+      <point x="1674.9070987654322" y="236.0" />
+      <point x="122.91666666666652" y="108.0" />
+    </edge>
+    <edge source="com.example.demo.repo.UserKartotek" target="com.example.demo.repo.UserKartotek.UserRowMapper">
+      <point x="-122.33333333333326" y="-87.5" />
+      <point x="1362.5736251402918" y="850.0" />
+      <point x="1324.0689113355782" y="850.0" />
+      <point x="-94.5" y="46.0" />
+    </edge>
+    <edge source="com.example.demo.repo.KundeKartotek" target="com.example.demo.model.Kunde">
+      <point x="122.33333333333326" y="-149.0" />
+      <point x="490.3797138047137" y="1070.0" />
+      <point x="518.4213804713804" y="1070.0" />
+      <point x="518.4213804713804" y="850.0" />
+      <point x="459.5" y="850.0" />
+      <point x="0.0" y="272.0" />
+    </edge>
+    <edge source="com.example.demo.model.Produkter" target="com.example.demo.model.ProduktSpec">
+      <point x="-2.2737367544323206E-13" y="-190.0" />
+      <point x="2645.7819584736253" y="364.0" />
+      <point x="2371.5828843995514" y="364.0" />
+      <point x="186.0" y="169.5" />
+    </edge>
+    <edge source="com.example.demo.repo.KundeKartotek.KundeRowMapper" target="com.example.demo.repo.KundeKartotek">
+      <point x="96.75" y="46.0" />
+      <point x="398.3654320987655" y="1070.0" />
+      <point x="368.0463804713804" y="1070.0" />
+      <point x="0.0" y="-149.0" />
+    </edge>
+    <edge source="com.example.demo.repo.ProduktKartotek" target="com.example.demo.repo.ProduktKartotek.ProdukterRowMapper">
+      <point x="91.75000000000023" y="128.5" />
+      <point x="2563.3189955106627" y="1101.0" />
+      <point x="2514.3189955106623" y="1101.0" />
+      <point x="-52.25" y="-46.0" />
+    </edge>
+    <edge source="com.example.demo.controller.WebController" target="com.example.demo.repo.UserRoleKartotek">
+      <point x="0.0" y="-333.5" />
+      <point x="1149.0689113355782" y="1413.0" />
+      <point x="1091.1713804713804" y="1413.0" />
+      <point x="91.75" y="87.5" />
+    </edge>
+    <edge source="com.example.demo.repo.ProduktKartotek.ProdukterRowMapper" target="com.example.demo.model.Produkter">
+      <point x="52.25" y="-46.0" />
+      <point x="2618.8189955106623" y="1101.0" />
+      <point x="2665.5689955106627" y="1101.0" />
+      <point x="2665.5689955106627" y="794.0" />
+      <point x="2645.7819584736253" y="794.0" />
+      <point x="0.0" y="190.0" />
+    </edge>
+    <edge source="com.example.demo.controller.WebController" target="com.example.demo.model.UserRole">
+      <point x="47.90909090909099" y="-333.5" />
+      <point x="1196.9780022446691" y="1423.0" />
+      <point x="1249.004713804714" y="1423.0" />
+      <point x="1249.004713804714" y="840.0" />
+      <point x="1141.2404320987657" y="840.0" />
+      <point x="78.0" y="67.0" />
+    </edge>
+    <edge source="com.example.demo.repo.UserKartotek.UserRowMapper" target="com.example.demo.repo.UserKartotek">
+      <point x="94.5" y="46.0" />
+      <point x="1513.0689113355782" y="850.0" />
+      <point x="1484.9069584736253" y="850.0" />
+      <point x="0.0" y="-87.5" />
+    </edge>
+    <edge source="com.example.demo.repo.UserRoleKartotek" target="com.example.demo.model.UserRole">
+      <point x="122.33333333333326" y="-87.5" />
+      <point x="1121.7547138047137" y="1070.0" />
+      <point x="1187.7402918069586" y="1070.0" />
+      <point x="1187.7402918069586" y="850.0" />
+      <point x="1089.2404320987657" y="850.0" />
+      <point x="26.0" y="67.0" />
+    </edge>
+    <edge source="com.example.demo.repo.ProduktKartotek.ProdukterRowMapper" target="com.example.demo.repo.ProduktKartotek">
+      <point x="-156.75" y="-46.0" />
+      <point x="2409.8189955106623" y="1101.0" />
+      <point x="2379.8189955106623" y="1101.0" />
+      <point x="-91.75" y="128.5" />
+    </edge>
+    <edge source="com.example.demo.repo.UserRoleKartotek" target="com.example.demo.repo.UserRoleKartotek.UserRoleRowMapper">
+      <point x="-122.33333333333326" y="-87.5" />
+      <point x="877.0880471380472" y="1070.0" />
+      <point x="840.4213804713804" y="1070.0" />
+      <point x="-102.5" y="46.0" />
+    </edge>
+    <edge source="com.example.demo.repo.UserKartotek" target="com.example.demo.model.Users">
+      <point x="122.33333333333326" y="-87.5" />
+      <point x="1607.2402918069583" y="850.0" />
+      <point x="1656.749859708193" y="850.0" />
+      <point x="1656.749859708193" y="256.0" />
+      <point x="1576.573765432099" y="256.0" />
+      <point x="24.583333333333258" y="108.0" />
+    </edge>
+    <edge source="com.example.demo.repo.ProduktKartotek" target="com.example.demo.model.Produkter">
+      <point x="2.2737367544323206E-13" y="-128.5" />
+      <point x="2471.5689955106627" y="794.0" />
+      <point x="2474.115291806959" y="794.0" />
+      <point x="-171.66666666666674" y="190.0" />
+    </edge>
+    <edge source="com.example.demo.controller.WebController" target="com.example.demo.repo.KundeKartotek">
+      <point x="-191.6363636363635" y="-333.5" />
+      <point x="957.4325476992146" y="1453.0" />
+      <point x="459.7963804713804" y="1453.0" />
+      <point x="91.75" y="149.0" />
+    </edge>
+    <edge source="com.example.demo.model.UserRole" target="com.example.demo.model.Users">
+      <point x="0.0" y="-67.0" />
+      <point x="1063.2404320987657" y="246.0" />
+      <point x="1429.073765432099" y="246.0" />
+      <point x="-122.91666666666674" y="108.0" />
+    </edge>
+    <edge source="com.example.demo.repo.KundeKartotek" target="com.example.demo.repo.KundeKartotek.KundeRowMapper">
+      <point x="-122.33333333333331" y="-149.0" />
+      <point x="245.71304713804716" y="1070.0" />
+      <point x="204.8654320987655" y="1070.0" />
+      <point x="-96.75" y="46.0" />
+    </edge>
+    <edge source="com.example.demo.repo.UserKartotek.UserRowMapper" target="com.example.demo.model.Users">
+      <point x="-94.5" y="-46.0" />
+      <point x="1324.0689113355782" y="256.0" />
+      <point x="1478.2404320987657" y="256.0" />
+      <point x="-73.75" y="108.0" />
+    </edge>
+    <edge source="com.example.demo.controller.WebController" target="com.example.demo.model.Kunde">
+      <point x="-143.72727272727263" y="-333.5" />
+      <point x="1005.3416386083055" y="1443.0" />
+      <point x="604.2819584736253" y="1443.0" />
+      <point x="604.2819584736253" y="840.0" />
+      <point x="643.3" y="840.0" />
+      <point x="183.79999999999995" y="272.0" />
+    </edge>
+    <edge source="com.example.demo.repo.ProduktSpecKartotek" target="com.example.demo.model.ProduktSpec">
+      <point x="122.33333333333348" y="-128.5" />
+      <point x="2206.9023288439957" y="794.0" />
+      <point x="2222.8514029180697" y="794.0" />
+      <point x="2222.8514029180697" y="364.0" />
+      <point x="2247.5828843995514" y="364.0" />
+      <point x="62.0" y="169.5" />
+    </edge>
+    <edge source="com.example.demo.repo.UserRoleKartotek.UserRoleRowMapper" target="com.example.demo.repo.UserRoleKartotek">
+      <point x="102.5" y="46.0" />
+      <point x="1045.4213804713804" y="1070.0" />
+      <point x="999.4213804713804" y="1070.0" />
+      <point x="0.0" y="-87.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7229524772497472" x="1730.162937062937" y="700.655944055944" />
+  <SelectedNodes>
+    <node>com.example.demo.repo.UserRoleKartotek</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
